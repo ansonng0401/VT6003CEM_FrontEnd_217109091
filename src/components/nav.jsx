@@ -37,10 +37,14 @@ function Nav(props) {
                        <Menu.Item key="5" type="primary"><Link to="/Register">Register</Link> </Menu.Item>  
               </Menu.SubMenu>
            }
-         {user.loggedIn&&<Menu.Item key="7" type="primary"  ><Link to="/dog">Upload Dogs</Link>
+         {user.loggedIn&&user.role=="admin"&&<Menu.Item key="6" type="primary"  ><Link to="/dog">Upload Dogs</Link>
         </Menu.Item>}
-
- {user.loggedIn&& user.role=="admin"&&<Menu.Item key="7" onClick={logout} type="primary"  ><Link to="/">Logout</Link>
+            {user.loggedIn&&user.role=="admin"&&<Menu.Item key="9" type="primary"  ><Link to="/dogedit">Edit Dogs</Link>
+        </Menu.Item>}
+        {user.loggedIn&&user.role=="admin"&&<Menu.Item key="7" type="primary"  ><Link to="/doglist">Delete Dogs</Link>
+        </Menu.Item>}
+        
+ {user.loggedIn&& <Menu.Item key="8" onClick={logout} type="primary"  ><Link to="/">Logout</Link>
         </Menu.Item>}
 
 

@@ -38,7 +38,7 @@ for (var i = 0; i < values.length; i++) {
       match=1
 			return (
 				<>
-         <h1 style={{ color: 'red' }}> Welcome to Blog Dashboard</h1>   
+         <h1 style={{ color: 'red' }}> Welcome to About Page</h1>   
 					<h2>{values[i].title}</h2>
 
 					<p style={{ color: 'green' }}>{values[i].fullText}</p>

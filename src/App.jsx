@@ -14,6 +14,10 @@ import Img_Page from './components/img_Page';
 import Register from './components/register';
 import UserContext from './contexts/user';
 import Dog from './components/dog';
+import Doglist from './components/doglist';
+import Dogedit from './components/editdogform';
+
+import SearchDog from './components/dogsearch';
 import {useNavigate } from 'react-router-dom';
 const { Header, Content, Footer, Button} = Layout;
 
@@ -69,14 +73,7 @@ regComplete() {
         <Nav/>
         </Header> 
 	      <Content style={{ padding: '0 50px', height: '90%' }}>
-        <Space>
-        <Link to="/">Home</Link>
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/about">About</Link>
-  
-          {!context.user.loggedIn&& <Link to="/login">Login</Link>}           {context.user.loggedIn&& <Link to="/account" style={{color:"red",background: "#91d5ff"}} type ="link" > Account: {context.user.username}  </Link>} 
-          {!context.user.registerOK&&!context.user.loggedIn&&<Link to="/register">Register</Link>}			      
-        </Space>
+
                        			
 				<Routes>
 						<Route exact path="/" element={<Home />} />
@@ -88,12 +85,14 @@ regComplete() {
             <Route path="/account" element={<Account />} />	
             <Route path="/img_Page" element={<Img_Page />} />	
             <Route path="/dog" element={<Dog />} />
-
+  <Route path="/dogsearch" element={<SearchDog />} />
+            <Route path="/doglist" element={<Doglist />} />
+<Route path="/dogedit" element={<Dogedit />} />
 				</Routes>			
 				</Content>
 				
        <Footer>
-					<p style={{ color: 'green' }}>VT6003CEM Demo</p>
+					<p style={{ color: 'green' }}>The Canine Shelter</p>
 				</Footer>
 			</Router>	
   </UserContext.Provider>  

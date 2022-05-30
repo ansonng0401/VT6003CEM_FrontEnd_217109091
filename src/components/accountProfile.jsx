@@ -40,12 +40,7 @@ function Profile(props) {
                  <tr> 
          <th align="left" style={{background:"#d3f261"}}>LastName:  </th>
          <td style={{background:"#d3f261"}}>{user.lastname}</td>
-         </tr>  
-        <tr> 
-          <th align="left" style={{background:"#d3f261"}} >Avatar:  </th>
-          <td style={{background:"#d3f261"}}><Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
-  {user.avatarurl}</td>
-        </tr>    
+         </tr>      
          <tr> 
           <th align="left" style={{background:"#f4ffb8"}} >Role: </th>
          <td style={{background:"#f4ffb8"}}>{user.role}</td>
@@ -55,8 +50,7 @@ function Profile(props) {
       { user.role=="admin"&& <SearchUser authbasic={ btoa(`${user.username}:${user.password}`)}/>}
        </Col></Row>
         
-      <Col span={12}>       
-      { user.role=="admin"&&  <ImageUpload />}</Col>
+
      </Space>
 		 </>
       )}

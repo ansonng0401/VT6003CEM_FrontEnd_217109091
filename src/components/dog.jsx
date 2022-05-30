@@ -6,7 +6,7 @@ function Dog() {
   
   return (
     <> 
-    <h2 style={{ color: 'green' }}> Welcome to Canine Shelter Registration</h2>     
+    <h2 style={{ color: 'green' }}>Upload Dogs</h2>     
      
        <DogForm />
     </>
